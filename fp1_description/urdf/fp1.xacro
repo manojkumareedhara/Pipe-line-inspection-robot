@@ -1,0 +1,361 @@
+<?xml version="1.0" ?>
+<robot name="fp1" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find fp1_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find fp1_description)/urdf/fp1.trans" />
+<xacro:include filename="$(find fp1_description)/urdf/fp1.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-2.8459739193187445e-15 -3.9527415546093675e-16 -3.9527415546093675e-16" rpy="0 0 0"/>
+    <mass value="1849.5725333233956"/>
+    <inertia ixx="458.823065" iyy="1985.024737" izz="1985.024737" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="flange_1">
+  <inertial>
+    <origin xyz="-9.828485622862302e-18 0.09749118098964926 0.000530383102575087" rpy="0 0 0"/>
+    <mass value="86.77057757551994"/>
+    <inertia ixx="3.479919" iyy="3.296628" izz="0.723923" ixy="0.0" iyz="0.013996" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.499993 -0.00272" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/flange_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.499993 -0.00272" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/flange_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extender_1">
+  <inertial>
+    <origin xyz="-2.1119292520476504e-68 0.6008075036234485 -0.14673395593660868" rpy="0 0 0"/>
+    <mass value="532.394116161908"/>
+    <inertia ixx="82.764575" iyy="5.248694" izz="80.022931" ixy="-0.0" iyz="-0.406793" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.649174 -0.153534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/extender_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.649174 -0.153534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/extender_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="flange_2">
+  <inertial>
+    <origin xyz="-6.311919080486982e-17 -0.04920500483368656 0.08416528754508845" rpy="0 0 0"/>
+    <mass value="86.77057757551994"/>
+    <inertia ixx="3.479919" iyy="1.37922" izz="2.641331" ixy="-0.0" iyz="-1.121012" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.252352 -0.431646" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/flange_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.252352 -0.431646" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/flange_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extender_2">
+  <inertial>
+    <origin xyz="2.0332333094184578e-32 -0.43231576271747607 0.44226971436688256" rpy="0 0 0"/>
+    <mass value="532.394116161908"/>
+    <inertia ixx="82.764575" iyy="60.977079" izz="24.294546" ixy="0.0" iyz="32.581591" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.198564 -0.636846" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/extender_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.198564 -0.636846" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/extender_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="flange_3">
+  <inertial>
+    <origin xyz="-2.7592054016864802e-17 -0.04828617615596309 -0.08469567064766331" rpy="0 0 0"/>
+    <mass value="86.77057757551994"/>
+    <inertia ixx="3.479919" iyy="1.354978" izz="2.665573" ixy="-0.0" iyz="1.107016" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.247641 0.434366" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/flange_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.247641 0.434366" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/flange_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extender_4">
+  <inertial>
+    <origin xyz="-4.194440477246574e-32 -0.42747874090597593 -0.44694775843027523" rpy="0 0 0"/>
+    <mass value="532.394116161908"/>
+    <inertia ixx="82.764575" iyy="61.681665" izz="23.589961" ixy="0.0" iyz="-32.174798" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.191623 0.638968" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/extender_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.191623 0.638968" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/extender_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_extender_1">
+  <inertial>
+    <origin xyz="-2.4121971167989907e-16 0.418551855685261 0.15227947692808366" rpy="0 0 0"/>
+    <mass value="65.91028992528666"/>
+    <inertia ixx="4.737994" iyy="0.981222" izz="4.070825" ixy="-0.0" iyz="-0.016808" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -1.850789 0.139934" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/wheel_extender_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -1.850789 0.139934" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/wheel_extender_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_1">
+  <inertial>
+    <origin xyz="6.859401935344068e-14 0.0002176595925682534 -0.039999052728155654" rpy="0 0 0"/>
+    <mass value="118.9177642385384"/>
+    <inertia ixx="1.945292" iyy="1.945346" izz="3.763685" ixy="-0.0" iyz="-0.009892" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -2.699688 -0.064687" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -2.699688 -0.064687" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_extender_2">
+  <inertial>
+    <origin xyz="1.723682480816672e-32 -0.08216592448418925 0.4377480924053143" rpy="0 0 0"/>
+    <mass value="65.91028992528666"/>
+    <inertia ixx="4.737994" iyy="3.283868" izz="1.768179" ixy="0.0" iyz="1.346242" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 1.063196 -1.521386" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/wheel_extender_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 1.063196 -1.521386" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/wheel_extender_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_extender_4">
+  <inertial>
+    <origin xyz="-4.5441963347714725e-31 -0.33801793120107815 -0.2900315693333988" rpy="0 0 0"/>
+    <mass value="65.91028992528666"/>
+    <inertia ixx="4.737994" iyy="3.312981" izz="1.739066" ixy="-0.0" iyz="-1.329433" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.785961 1.681448" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/wheel_extender_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.785961 1.681448" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/wheel_extender_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_2">
+  <inertial>
+    <origin xyz="6.934453011808728e-14 -0.03453136787112032 -0.02018800840388657" rpy="0 0 0"/>
+    <mass value="118.9177642385384"/>
+    <inertia ixx="1.945292" iyy="3.300534" izz="2.408498" ixy="-0.0" iyz="0.79231" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 1.319536 -2.356125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/wheel_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 1.319536 -2.356125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/wheel_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_3">
+  <inertial>
+    <origin xyz="6.933564833389027e-14 -0.03474944029157734 0.01981113733553075" rpy="0 0 0"/>
+    <mass value="118.9177642385384"/>
+    <inertia ixx="1.945292" iyy="3.317668" izz="2.391364" ixy="0.0" iyz="-0.782418" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 1.293823 2.370342" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/wheel_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 1.293823 2.370342" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fp1_description/meshes/wheel_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="flange_joint1" type="fixed">
+  <origin xyz="0.0 0.499993 0.00272" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="flange_1"/>
+</joint>
+
+<joint name="flangerev1" type="continuous">
+  <origin xyz="-0.0 0.149181 0.150814" rpy="0 0 0"/>
+  <parent link="flange_1"/>
+  <child link="extender_1"/>
+  <axis xyz="0.0 -0.00544 0.999985"/>
+</joint>
+
+<joint name="flange_joint2" type="fixed">
+  <origin xyz="0.0 -0.252352 0.431646" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="flange_2"/>
+</joint>
+
+<joint name="flangerev2" type="continuous">
+  <origin xyz="-0.0 0.053788 0.2052" rpy="0 0 0"/>
+  <parent link="flange_2"/>
+  <child link="extender_2"/>
+  <axis xyz="-0.0 0.863293 0.504704"/>
+</joint>
+
+<joint name="flange_joint3" type="fixed">
+  <origin xyz="0.0 -0.247641 -0.434366" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="flange_3"/>
+</joint>
+
+<joint name="flangerev3" type="continuous">
+  <origin xyz="-0.0 0.056018 -0.204602" rpy="0 0 0"/>
+  <parent link="flange_3"/>
+  <child link="extender_4"/>
+  <axis xyz="-0.0 0.868733 -0.495281"/>
+</joint>
+
+<joint name="extenderrev1" type="continuous">
+  <origin xyz="0.0 1.201615 -0.293468" rpy="0 0 0"/>
+  <parent link="extender_1"/>
+  <child link="wheel_extender_1"/>
+  <axis xyz="-0.0 -0.00544 0.999985"/>
+</joint>
+
+<joint name="wheelrev1" type="continuous">
+  <origin xyz="0.0 0.848899 0.204621" rpy="0 0 0"/>
+  <parent link="wheel_extender_1"/>
+  <child link="wheel_1"/>
+  <axis xyz="0.0 -0.00544 0.999985"/>
+</joint>
+
+<joint name="extenderrev2" type="continuous">
+  <origin xyz="0.0 -0.864632 0.88454" rpy="0 0 0"/>
+  <parent link="extender_2"/>
+  <child link="wheel_extender_2"/>
+  <axis xyz="0.0 -0.863293 -0.504704"/>
+</joint>
+
+<joint name="Revolute 10" type="continuous">
+  <origin xyz="0.0 -0.594338 -1.04248" rpy="0 0 0"/>
+  <parent link="extender_4"/>
+  <child link="wheel_extender_4"/>
+  <axis xyz="-0.0 0.868733 -0.495281"/>
+</joint>
+
+<joint name="Revolute 11" type="continuous">
+  <origin xyz="0.0 -0.25634 0.834739" rpy="0 0 0"/>
+  <parent link="wheel_extender_2"/>
+  <child link="wheel_2"/>
+  <axis xyz="-0.0 0.863293 0.504704"/>
+</joint>
+
+<joint name="Revolute 12" type="continuous">
+  <origin xyz="0.0 -0.507862 -0.688894" rpy="0 0 0"/>
+  <parent link="wheel_extender_4"/>
+  <child link="wheel_3"/>
+  <axis xyz="-0.0 0.868733 -0.495281"/>
+</joint>
+
+</robot>
